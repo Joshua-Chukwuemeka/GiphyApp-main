@@ -1,0 +1,38 @@
+<div class="container">
+  <img [src]="gifsIdData?.images?.original?.url" />
+
+  <div class="details">
+    <div *ngIf="gifsIdData?.title" class="header">
+      <span class="name">
+        <h3>Title:</h3>
+        {{ gifsIdData?.title }}
+      </span>
+    </div>
+    <div *ngIf="gifsIdData?.username" class="header">
+      <h3>Username:</h3>
+      <span class="name">
+        {{ gifsIdData?.username | uppercase }}
+      </span>
+    </div>
+    <div *ngIf="gifsIdData?.user?.display_name" class="header">
+      <h3>Display name:</h3>
+      <span class="name">
+        {{ gifsIdData?.user?.display_name }}
+      </span>
+    </div>
+    <div *ngIf="gifsIdData?.type" class="header">
+      <h3>Type:</h3>
+      <span class="name">
+        {{ gifsIdData?.type | uppercase }}
+      </span>
+    </div>
+    <div *ngIf="gifsIdData?.user?.description" class="header">
+      <h3>Description:</h3>
+      <span class="name">
+        {{ gifsIdData?.user?.description }}
+      </span>
+    </div>
+    <button routerLink="/">Back</button>
+  </div>
+
+</div>

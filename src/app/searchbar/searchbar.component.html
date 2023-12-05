@@ -1,0 +1,11 @@
+<div class="form-group">
+  <input #searchTerm type="text" />
+  <input
+    (click)="onClick(searchTerm.value)"
+    type="submit"
+    value="Search"
+    class="btn"
+  />
+</div>
+<app-result-list [gifdata]="getData()"></app-result-list>
+

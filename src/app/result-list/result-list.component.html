@@ -1,0 +1,5 @@
+<div class="img-container">
+  <div *ngFor="let data of gifdata" routerLink="/gif-details/{{ data?.id }}">
+    <img src="{{ data?.images?.original?.url }}" />
+  </div>
+</div>
